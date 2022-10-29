@@ -1,0 +1,96 @@
+{
+	"info": {
+		"_postman_id": "79c20201-eaba-4944-9f1c-b92318822d00",
+		"name": "LeanPay",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10329839"
+	},
+	"item": [
+		{
+			"name": "Get Calculated Payments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/loan/calculate/?loanAmount=20000&interestRate=5&numberOfPayments=1&type=Year",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"loan",
+						"calculate",
+						""
+					],
+					"query": [
+						{
+							"key": "loanAmount",
+							"value": "20000"
+						},
+						{
+							"key": "interestRate",
+							"value": "5"
+						},
+						{
+							"key": "numberOfPayments",
+							"value": "1"
+						},
+						{
+							"key": "type",
+							"value": "Year"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Loans",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/loan",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"loan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Calculated Payments",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"loanAmount\": 1000.0,\r\n    \"interestRate\": 5,\r\n    \"loanTerm\": 5,\r\n    \"type\": \"Month\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/loan",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"loan"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
